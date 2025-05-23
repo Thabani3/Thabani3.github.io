@@ -1,457 +1,246 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thabaniirvin Miya - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    * {
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+      font-family: 'Fira Code', monospace;
+    }
 
+    body {
+      margin: 0;
+      background-color: #0f111a;
+      color: #00ffcc;
+    }
 
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 17, 26, 0.9);
+      border-bottom: 2px solid #00ffcc;
+      box-shadow: 0 0 10px #00ffcc;
+      z-index: 1000;
+    }
 
-    <!-- Basic -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Mobile Metas -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- Site Metas -->
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
 
-    <title>Thabaniirvin</title>
+    nav a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+    }
 
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #00ffcc;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease-in-out;
+    }
 
-</script>
-    <!-- slider stylesheet -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"
-    />
+    nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
 
-    <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: glowIn 2s ease-out;
+    }
 
-    <!-- fonts style -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:400,700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet" />
-    <!-- responsive style -->
-    <link href="css/responsive.css" rel="stylesheet" />
-  </head>
+    h1 {
+      font-size: 3.5rem;
+      color: #00ffcc;
+      text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+    }
 
-  <body>
-    <div class="hero_area">
-      <!-- header section strats -->
-      <header class="header_section">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-11 offset-md-1 px-0">
-              <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-                <a class="navbar-brand" href="index.html">
-                  <span>
-                    Thabaniirvin Miya
-                  </span>
-                </a>
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+    section {
+      padding: 100px 30px;
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.03);
+      margin-top: 60px;
+      border-radius: 10px;
+      border: 1px solid #00ffcc;
+      box-shadow: 0 0 20px #00ffcc30;
+    }
 
-                <div
-                  class="collapse navbar-collapse"
-                  id="navbarSupportedContent"
-                >
-                  <div
-                    class="d-flex ml-auto flex-column flex-lg-row align-items-center"
-                  >
-                    <ul class="navbar-nav  ">
-                      <li class="nav-item active">
-                        <a class="nav-link pl-0" href="index.html"
-                          >Home <span class="sr-only">(current)</span></a
-                        >
-                     
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </header>
-      <!-- end header section -->
+    section h2 {
+      font-size: 2rem;
+      border-bottom: 2px dashed #00ffcc;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
 
-      <!-- slider section -->
-      <div class="slider_section">
-        <div
-          id="carouselExampleControls"
-          class="carousel slide"
-          data-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-lg-6 offset-lg-1">
-                    <div class="detail-box">
-                      <div class="heading_box">
-                        <h2>I Am Thabanii This is My <span>Creative</span></h2>
-                        <h1>
-                          Portfolio
-                        </h1>
-                      </div>
-                      <div>
-                        <a href="">
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-5 px-0">
-                    <div class="img-box">
-                      <img src="" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-lg-6 offset-lg-1">
-                    <div class="detail-box">
-                      <div class="heading_box">
-                        <h2>I Am Thabanii This is My <span>Creative</span></h2>
-                        <h1>
-                          Portfolio
-                        </h1>
-                      </div>
-                      <div>
-                        <a href="">
-                        
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-5 px-0">
-                    <div class="img-box">
-                      <img src="" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-lg-6 offset-lg-1">
-                    <div class="detail-box">
-                      <div class="heading_box">
-                        <h2>I Am Thabanii This is My <span>Creative</span></h2>
-                        <h1>
-                          Portfolio
-                        </h1>
-                      </div>
-                      <div>
-                        <a href="">
-                         
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-5 px-0">
-                    <div class="img-box">
-                      <img src="" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slider_btn-container">
-          <a
-            class="carousel-control-prev"
-            href="#carouselExampleControls"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#carouselExampleControls"
-            role="button"
-            data-slide="next"
-          >
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
+    ul {
+      list-style-type: "🧬 ";
+      padding-left: 20px;
+    }
 
-      <!-- end slider section -->
-    </div>
-    <!-- end hero area -->
+    a {
+      color: #00ffcc;
+    }
 
-    <!-- design section -->
+    a:hover {
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #00ffcc;
+    }
 
-    <section class="design_section layout_padding-top">
-      <div class="container">
-        <div class="heading_container">
-          <h2>
-            TOOLS & TECHNOLOGIES KNOWLEGDE
-          </h2>
-        </div>
-        <div class="design_container layout_padding2">
-          <div class="box b-1">
-            <h5>
-              JavaScript<br>
-			  c#<br>
-			  Python<br>
-			  java<br>
-			  Sql<br>
-			  Html& CSS
-            </h5>
-          </div>
-          <div class="box b-2">
-            <h5>
-            Visual Studio<br>
-			Android Studio<br>
-			MMS SQL<br>
-			Odoo<br>
-			M Azzure
-            </h5>
-          </div>
-          <div class="box b-3">
-            <h5>
-              .net core webapps<br>
-			  Android apps<br>
-			  .net core webforms<br>
-			  Sql database<br>
-			  NoSql database<br>
-			  Web Api's
-			  
-            </h5>
-          </div>
-        </div>
-      </div>
-    </section>
+    .project {
+      margin-bottom: 20px;
+    }
 
-    <!-- end design section   -->
-    <div>
-      <hr class="section_hr" />
-    </div>
-    <!-- about section -->
+    .project a {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
 
-    <section class="about_section layout_padding-bottom">
-      <div class="container">
-        <div class="heading_container">
-          <h2>
-            About
-          </h2>
-        </div>
-        <div class="box layout_padding2-top layout_padding-bottom">
-          <div class="detail-box">
-            <p>
-			I am a Junior Software developer with fundamental knowledge of software design, development and
-testing seeking to utilize broad educational background with excellent analytical technical and programming skills
-to thrive as a developer.
-            </p>
-          </div>
-          <div class="img-box">
-            <img src="images/about-img.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-      <div class="btn-box">
-      
-      </div>
-    </section>
+    .project p {
+      margin: 5px 0 15px;
+    }
 
-    <!-- end about section -->
+    @keyframes glowIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+        text-shadow: none;
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+        text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+      }
+    }
+  </style>
+</head>
+<body>
 
-    <!-- project section -->
+<header>
+  <nav>
+    <a href="#background">Background</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <section class="project_section layout_padding-bottom">
-      <div class="container">
-        <div class="heading_container">
-          <h2>
-            My Projects
-          </h2>
-        </div>
-        <div class="project_container layout_padding2-top">
-          <div class="box">
-		  <a href="http://healthwell.azurewebsites.net/"><img src="images/GymSystem.jpg" alt="" ></a>
-          </div>
-		  <br>
-          <div class="box">
-            <a href="https://www.github.com/Thabani3"><img src="images/Debtor.png" alt="" ></a>
-          </div>
-		  </br>
-          <div class="box">
-           <a href="https://www.github.com/Thabani3"><img src="images/App.png" alt="" ></a>
-          </div>
-		  <br>
-		   <div class="box">
-           <a href="https://abcargo20221103084845.azurewebsites.net/"><img src="images/Abcargo.png" alt="" ></a>
-          </div>
-         </br>       
-      </div>
-    </section>
+<div class="hero">
+  <h1>Hello, I'm Thabaniirvin Miya 👨‍💻</h1>
+</div>
 
-    <!-- end project section -->
-
-    <!-- expand section -->
-
-    <section class="expand_section">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="img-box">
-              <img src="images/CODE.jpeg" alt="" />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="detail-box">
-              <h2>
-                MY BRIEF DESCRIPTION 
-              </h2>
-              <p>
-                🚀 Passionate Junior Software Developer | Applications Development Specialist | Seeking Exciting Opportunities! 🚀
+<section id="background">
+  <h2>Background</h2>
+  <p>
+    🚀 Passionate Junior Software Developer | Applications Development Specialist | Seeking Exciting Opportunities! 🚀
 
 🎓 Education: Diploma in Information and communications technology in Applications Development | Advanced Diploma in Information and Communications Technology
-
+<br>
 💻 Technical Proficiency:
-
-Languages: C# (MVC, Windows Form, Web Forms), Java, JavaScript, Python
-Database: Microsoft SQL Server, PostgreSQL
-Cloud Platforms: Microsoft Azure, Odoo.SH
-
+</br>
+<br>
+-Languages: C# (MVC, Windows Forms, Web Forms), Java, JavaScript, Python
+-Database: Microsoft SQL Server, PostgreSQL, MySQL (MariaDB), Firebase
+-Cloud Platforms: Microsoft Azure, Odoo.SH
+-Other Skills: Developing Odoo custom modules with Python, data migration, data mapping using SQL, 
+ manual and unit testing, client consulting, Linux server administration
+</br>
+<br>
 🌟 Professional Journey:
+</br>
+<br>
 Currently thriving as a Junior Software Developer, actively contributing to diverse projects, particularly specializing in Enterprise Resource Planning (ERP) applications using Python and PostgreSQL. My responsibilities involve crafting robust solutions, ensuring seamless functionality, and continuously optimizing performance.
-
+</br>
+<br>
 🌐 Current Goals:
+</br>
 Eagerly advancing my expertise in Python programming through advanced Udemy courses during spare time, with the goal of mastering the language. Passionate about staying updated with the latest industry trends and technologies.
-				
-				<p>Click here to download my CV:<p>
-                <p><a href="T miyaCV.pdf" download>My Cv</a></p>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- end expand section -->
-    <div>
-      <hr class="section_hr" />
-    </div>
-    <!-- blog section -->
-  
-    <!-- end blog section -->
-
-    <!-- contact section -->
-
-   <section class="contact_section layout_padding">
-  <div class="container">
-    <div class="heading_container">
-      <h2>Contact Me</h2>
-    </div>
-    <div class="">
-      <div class="">
-        <div class="row">
-          <div class="col-md-9 mx-auto">
-            <div class="contact-form">
-              <form action="submit_contact_form.php" method="POST">
-                <div>
-                  <input type="text" name="full_name" placeholder="Full Name" required />
-                </div>
-                <div>
-                  <input type="tel" name="phone_number" placeholder="Phone Number" required />
-                </div>
-                <div>
-                  <input type="email" name="email_address" placeholder="Email Address" required />
-                </div>
-                <div>
-                  <textarea name="message" placeholder="Message" class="input_message" required></textarea>
-                </div>
-                <div class="d-flex justify-content-center">
-                  <button type="submit" class="btn_on-hover">Send</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </p>
 </section>
 
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>👨‍💻 <strong>C#</strong></li>
+    <li>🐍 <strong>Python</strong></li>
+    <li>🟨 <strong>JavaScript</strong></li>
+    <li>🗄️ <strong>SQL</strong></li>
+    <li>🌐 <strong>HTML & CSS</strong></li>
+    <li>🐘 <strong>PHP</strong></li>
+    <li>🧰 <strong>Frameworks:</strong> .NET, ASP.NET, Java EE, AngularJS, Odoo (Owl)</li>
+    <li>💻 <strong>OS:</strong> Linux, Windows</li>
+    <li>🔧 <strong>Tools:</strong> Git, GitHub, VS Code, Visual Studio, PostgreSQL, SQL Server</li>
+  </ul>
+</section>
 
-    <!-- end contact section -->
+<section id="experience">
+  <h2>Experience</h2>
+  <h3>XRA (PTY) LTD | Junior Software Developer (2024 - Present)</h3>
+  <ul>
+    <li>ERP module development on Odoo/Odoo.sh with Python backend</li>
+    <li>Custom app development using Python, JS, CSS, XML</li>
+    <li>Municipal MVC systems with C#, SQL, JS, Bootstrap</li>
+    <li>Data mapping and migration processes</li>
+    <li>Testing, bug fixing, and Linux-based deployment</li>
+  </ul>
 
-    <!-- info section -->
-    <section class="info_section layout_padding-top layout_padding2-bottom">
-      <div class="container">
-        <div class="social_container">
-          <h2>
-            GET IN TOUCH
-          </h2>
-          <div class="social_box">
-            <a href="https://www.facebook.com/thabani.irvin.5">
-              <img src="images/fb.png" alt="" />
-            </a>
-            <a href="https://www.linkedin.com/in/thabani-miya-b18a141a8">
-              <img src="images/linkedin.png" alt="" />
-            </a>
-            <a href="https://www.github.com/Thabani3">
-              <img src="images/Github.jpg" alt="" />
-            </a>
-			 <a href="mailto:thabaniirvin956@gmail.com">
-              <img src="images/envelope-white.png" alt="" />
-            </a>
-			 <a href="tel:+27737776710">
-              <img src="images/telephone-white.png" alt="" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+  <h3>Innovate Durban / DSI-HSRC | UI/UX Designer Intern (2023)</h3>
+  <ul>
+    <li>Website content management with Wix & WordPress</li>
+    <li>Portal development with PHP and MySQL</li>
+    <li>Design support and mentoring portal creation</li>
+  </ul>
+</section>
 
-    <!-- end info_section -->
+<section id="projects">
+  <h2>Projects</h2>
+  
+  <div class="project">
+    <a href="https://github.com/Thabani3/Spike-Removal-Tool" target="_blank">🚀 Spike Removal Tool</a>
+    <p>A tool to automatically detect and remove data spikes. Focused on clean datasets for analysis.</p>
+  </div>
 
-    <!-- footer section -->
-    <section class="container-fluid footer_section">
-      <div class="container">
-        <p>
-          &copy; All Rights Reserved By
-           Thabaniirvin Miya
-        </p>
-      </div>
-    </section>
-    <!-- footer section -->
+  <div class="project">
+    <a href="https://github.com/Thabani3/Central_Supplier_Database_Odoo_integration" target="_blank">🧩 Central Supplier Database – Odoo Integration</a>
+    <p>Odoo module integration with CSD using MVC (C#, SQL, JS) for municipal clients.</p>
+  </div>
 
-    <script  src="js/jquery-3.4.1.min.js"></script>
-    <script  src="js/bootstrap.js"></script>
+  <div class="project">
+    <a href="https://github.com/Thabani3/Job-Costing" target="_blank">💼 Job Costing App</a>
+    <p>Custom job costing solution for managing project expenses, tasks, and budgets in Odoo.</p>
+  </div>
 
-    <script>
-      function openNav() {
-        document.getElementById("myNav").style.width = "100%";
-      }
+</section>
 
-      function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
-      }
-    </script>
-  </body>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>📍 <strong>Address:</strong> 42 Masobiya Mdluli Street, Durban 4001</p>
+  <p>📞 <strong>Phone:</strong> 073 777 6710</p>
+  <p>📧 <strong>Email:</strong> <a href="mailto:thabaniirvin956@gmail.com">thabaniirvin956@gmail.com</a></p>
+  <p>🔗 <a href="https://www.linkedin.com/in/thabani-miya-b18a141a8">LinkedIn</a> | 
+         <a href="https://github.com/Thabani3">GitHub</a></p>
+</section>
+
+</body>
 </html>
